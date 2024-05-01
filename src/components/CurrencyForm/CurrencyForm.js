@@ -12,7 +12,7 @@ const CurrencyForm = ({ action }) => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    action({ 
+    action({  
       amount: parseInt(amount),
       from,
       to,
@@ -23,7 +23,7 @@ const CurrencyForm = ({ action }) => {
     <form onSubmit={handleSubmit} className={styles.form}>
       <label>
         <span>Amount:</span>
-        <TextInput data-testid="amount" type="text" value={amount} onChange={e => setAmount(e.target.value)} />
+        <TextInput data-testid="amount" type="number" value={amount} onChange={e => setAmount(e.target.value)} />
       </label>
       <label>
         <span>From</span>
